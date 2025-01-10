@@ -1,0 +1,118 @@
+/* Estilos generales */
+body {
+    background: #042e4b;
+    color: #fff;
+    font: 19px/1.5 'Fira Sans Extra Condensed', Helvetica, Helvetica Neue, Arial;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Reset para figuras e imágenes */
+body, figure, image {
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.intro {
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/579121/sky-backr2.jpg') no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    display: flex; /* Flexbox para centrar */
+    flex-direction: column; /* Elementos en columna */
+    justify-content: center; /* Centrado vertical */
+    align-items: center; /* Centrado horizontal */
+}
+
+/* Estilos para h1 y h2 */
+.intro h1, 
+.intro h2 {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin: 0;
+    padding: 10px;
+}
+
+/* Encabezado principal (h1) */
+.intro h1 {
+    font-size: 3rem; /* Tamaño inicial */
+    font-weight: bold;
+}
+
+/* Subtítulo (h2) */
+.intro h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 120px;
+}
+
+/* Contenedor de tulipanes */
+.tulips {
+    bottom: -10px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Visibilidad para stems */
+.stemEnd1, .stemEnd2, .stemEnd3, .stemEnd4 {
+    visibility: hidden;
+}
+
+/* Media queries para responsividad */
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .intro h1 {
+        font-size: 2.5rem; /* Reducir tamaño del h1 */
+    }
+
+    .intro h2 {
+        font-size: 1.2rem; /* Reducir tamaño del h2 */
+    }
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 480px) {
+    .intro h1 {
+        font-size: 2rem; /* Reducir aún más el h1 */
+    }
+
+    .intro h2 {
+        font-size: 1rem; /* Reducir aún más el h2 */
+    }
+}
+
+@keyframes moveTulip {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(5deg);
+    }
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }
+  }
+  
+  .tulips {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: moveTulip 5s ease-in-out infinite;
+  }
+  
+  .tulips svg {
+    animation: moveTulip 5s ease-in-out infinite;
+  }
+  
+
